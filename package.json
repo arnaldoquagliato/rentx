@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon --watch 'src/' --exec 'ts-node src/server.ts' -e ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "typeorm": "ts-node-dev ./node_modules/typeorm/cli"
+    "typeorm": "ts-node ./node_modules/typeorm/cli"
   },
   "author": "",
   "license": "ISC",
