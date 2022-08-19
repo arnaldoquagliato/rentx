@@ -1,4 +1,4 @@
- import { Category } from "../model/Category";
+ import { Category } from "../entites/Category";
 
  
  interface ICreateRepositoryDTO {
@@ -7,9 +7,9 @@
  }
 
  interface ICategoryRepository{
-     findByName(name: string): Category | boolean;
-     list(): Category[];
-     create({name , description}: ICreateRepositoryDTO): void;
+     findByName(name: string): any;
+     list(): any;
+     create({name , description}: ICreateRepositoryDTO): any;
  }
 
 export { ICategoryRepository, ICreateRepositoryDTO }

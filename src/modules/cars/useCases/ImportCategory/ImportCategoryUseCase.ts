@@ -24,7 +24,6 @@ class ImportCategoryUseCase {
 
             parseFile.on("data", async(line) => {
                 const [name, description] = line;
-                console.log(name, description,3)
 
                 categories.push({
                     name,
@@ -57,9 +56,6 @@ class ImportCategoryUseCase {
            }
 
        })
-
-
-       console.log(categories)
     }
 }
 

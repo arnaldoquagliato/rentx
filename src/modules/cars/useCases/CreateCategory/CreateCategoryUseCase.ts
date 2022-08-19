@@ -11,9 +11,9 @@ class CreateCategoryUseCase {
 
     constructor(private categoryRepository: ICategoryRepository){}
 
-    execute({name, description}: IRequest): void{
+    async execute({name, description}: IRequest): Promise<void>{
 
-        const categoryAlredyExits = this.categoryRepository.findByName(name)
+        const categoryAlredyExits = await this.categoryRepository.findByName(name)
 
         if(categoryAlredyExits)
             throw new Error("Category alredy exists !");
