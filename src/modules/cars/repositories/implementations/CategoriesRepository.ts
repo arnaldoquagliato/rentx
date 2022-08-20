@@ -7,19 +7,8 @@ import { ICategoryRepository, ICreateRepositoryDTO } from "../ICategoryRepositor
 class CategoryRespository implements ICategoryRepository{
     private repository: Repository<Category>;
     
-    private static INSTANCE: CategoryRespository;
-
-    private constructor(){
+    constructor(){
         this.repository = getRepository(Category)
-    }
-
-
-    public static getInstance(): CategoryRespository{
-        if(!CategoryRespository.INSTANCE){
-            CategoryRespository.INSTANCE = new CategoryRespository()
-        }
-
-        return CategoryRespository.INSTANCE
     }
 
     async findByName(name: string): Promise<Category>{
